@@ -6,9 +6,11 @@ const renderUrl = function(url){
 
 const onPageLoadedNone = function(){
     let getUrl = renderUrl(document.location.href);
-    if (getUrl.includes('viewPost/')){
-        getUrl = getUrl.replace('viewPost/','');
-        openArticle(getUrl+'.html');
+    if (getUrl){
+        if (getUrl.includes('viewPost/')){
+            getUrl = getUrl.replace('viewPost/','');
+            openArticle(getUrl+'.html');
+        }
     }
 }
 
