@@ -1,0 +1,95 @@
+.article {
+    padding: 5% 20%;
+}
+
+img.article-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.article-title {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.article-date-and-author {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.article * {
+    font-family: 'Inter', sans-serif;
+}
+
+.article-date-and-author {
+    margin: 10px 0px;
+    color: #696969;
+}
+
+.article-tags.tags {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.article {
+    /*padding: 5% 20%;*/
+    padding: 0 4vw;
+}
+
+img.article-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.article-title {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.article-date-and-author {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.article * {
+    font-family: 'Inter', sans-serif;
+}
+
+.article-date-and-author {
+    margin: 10px 0px;
+    color: #696969;
+}
+
+.article-tags.tags {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.article_inner {
+    max-width: 800px;
+    width: 100%;
+    margin:0 auto;
+}
+
+@media screen and (max-width: 600px){
+    .article {
+        padding: 5% 5%;
+    }
+
+    .article-date-and-author {
+        font-size: 15px;
+    }
+}
+
+.comments > iframe {
+    width: 100%;
+    border: none;
+}
+
+.comments {
+    margin-top: 20px;
+}
