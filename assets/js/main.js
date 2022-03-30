@@ -1,3 +1,12 @@
+var langitems = {};
+
+if (document.location.pathname.includes('ru')){
+    langitems["search"] = 'Ничего не найдено по запросу %query%';
+}
+if (document.location.pathname.includes('en')){
+    langitems["search"] = 'Nothing found for query %query%';
+}
+
 let openArticle = function(url){
      $.ajax({
         url: url,
