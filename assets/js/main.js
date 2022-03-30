@@ -9,7 +9,7 @@ let openArticle = function(url){
             barticle.innerHTML = '<div class="tools"><span class="close-article material-icons"> arrow_back </span></div>'+data;
             document.body.append(barticle);
             closeArticle();
-            document.getElementsByClassName('comments')[0].innerHTML = '<iframe class="ciframe" src="https://com.weebys.space/comment.php?p='+encodeURIComponent(document.location.pathname.replaceAll('/','-'))+'"></iframe>';
+            document.getElementsByClassName('comments')[0].innerHTML = '<iframe class="ciframe" src="https://comments.weopensec.ru/comment.php?p='+encodeURIComponent(document.location.pathname.replaceAll('/','-'))+'"></iframe>';
             document.getElementsByTagName('iframe')[0].onload=function(){
                 sendMessage();
                 amplitude.getInstance().logEvent('openarticle');
