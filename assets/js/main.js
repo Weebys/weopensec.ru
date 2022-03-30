@@ -1,10 +1,10 @@
 var langitems = {};
 
 if (document.location.pathname.includes('ru')){
-    langitems["search"] = 'Ничего не найдено по запросу %query%';
+    langitems["search"] = 'Ничего не найдено по запросу: %query%';
 }
 if (document.location.pathname.includes('en')){
-    langitems["search"] = 'Nothing found for query %query%';
+    langitems["search"] = 'Nothing found for query: %query%';
 }
 
 let openArticle = function(url){
@@ -87,6 +87,14 @@ function receiveMessage(e) {
 }
 window.addEventListener('message', receiveMessage);
 
+const setDirectives = function(){
+    document.querySelector('.logo').childNodes[1].onclick = document.location.href="#";
+    document.querySelector('.logo').childNodes[3].onclick = document.location.href="#";
+    document.querySelector('.logo').childNodes[1].style = "cursor: pointer;";
+    document.querySelector('.logo').childNodes[3].style = "cursor: pointer;";
+}
+
 //Initiating
 checkUrl();
-amplitude.getInstance().logEvent('User on website');
+setDirectives();
+amplitude.getInstance().logEvent('newuser');
