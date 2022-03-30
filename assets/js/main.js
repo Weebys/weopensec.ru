@@ -18,7 +18,7 @@ let openArticle = function(url){
             barticle.innerHTML = '<div class="tools"><span class="close-article material-icons"> arrow_back </span></div>'+data;
             document.body.append(barticle);
             closeArticle();
-            document.getElementsByClassName('comments')[0].innerHTML = '<iframe class="ciframe" src="https://comments.weopensec.ru/comment.php?p='+encodeURIComponent(document.location.pathname.replaceAll('/','-'))+'"></iframe>';
+            document.getElementsByClassName('comments')[0].innerHTML = '<iframe class="ciframe" src="https://comments.weopensec.ru/comment.php?p='+encodeURIComponent(document.location.href.split("#")[1].replaceAll('//', '/').replaceAll('/','-'))+'"></iframe>';
             document.getElementsByTagName('iframe')[0].onload=function(){
                 sendMessage();
                 amplitude.getInstance().logEvent('openarticle');
@@ -77,7 +77,7 @@ let checkUrl = function(){
 
 
 sendMessage = function(e) {
-    document.getElementsByTagName('iframe')[0].contentWindow.postMessage('secret command', 'https://comment.weebys.space');
+    document.getElementsByTagName('iframe')[0].contentWindow.postMessage('secret command', 'https://comments.weopensec.ru');
 }
 function receiveMessage(e) {
 					if (e.data.includes(":"))
