@@ -88,8 +88,8 @@ function receiveMessage(e) {
 window.addEventListener('message', receiveMessage);
 
 const setDirectives = function(){
-    document.querySelector('.logo').childNodes[1].onclick = document.location.href="#";
-    document.querySelector('.logo').childNodes[3].onclick = document.location.href="#";
+    document.querySelector('.logo').childNodes[1].onclick = function (){document.location.href="#"};
+    document.querySelector('.logo').childNodes[3].onclick = function(){document.location.href="#"};
     document.querySelector('.logo').childNodes[1].style = "cursor: pointer;";
     document.querySelector('.logo').childNodes[3].style = "cursor: pointer;";
 }
