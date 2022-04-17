@@ -21,7 +21,7 @@ document.querySelector('.search_btn').onclick = function(){
     let searchtext = document.querySelector('.search_input').value;
     let articles = document.location.pathname+"/articles";
     $.ajax({
-        url: articles+'/index.json',
+        url: langitems["lang_pathname"] + articles+'/index.json',
         method: 'get',
         dataType: 'json',
         success: function(data){
