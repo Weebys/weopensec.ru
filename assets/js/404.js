@@ -118,3 +118,5 @@ let checkUrl = function(){
     });
 }
 
+matchRegexp();
+
