@@ -8,7 +8,7 @@ if (document.location.pathname.includes('ru')){
     	langitems["search"] = 'Nothing found for query: %query%';
 		langitems["lang_pathname"] = '/en/';
 	}else{
-		setLocation('/not-found');
+		setLocation('/404');
 	}
 }
 
@@ -52,7 +52,7 @@ let closeArticle = function(){
         barticles.classList.add('closing');
         setTimeout(() => barticles.remove() ,1000);
         checkUrl();
-        document.location.href='#';
+        setLocation(langitems["lang_pathname"]);
     }
 }
 

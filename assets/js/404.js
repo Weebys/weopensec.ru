@@ -40,8 +40,8 @@ const matchRegexp = function (){
         dataType: 'json',
         success: function(data){
 			let chRE = checkRegExp(document.location.pathname, data);
-			if (!chRe){
-				setLocation('/404');
+			if (!chRE){
+				setLocation('/not-found');
 			}
 		}
 	});
