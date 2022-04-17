@@ -23,8 +23,14 @@ const setLocation = function (curLoc){
     location.hash = '#' + curLoc;
 }
 
-const checkRegExp = function(url){
-	
+const checkRegExp = function(url, data){
+	for (let k in data){
+		let it = data[k];
+		if (url.match(it["preg"])){
+			return true;
+		}
+	}
+	return false;
 }
 
 const matchRegexp = function (){
@@ -33,7 +39,7 @@ const matchRegexp = function (){
         method: 'get',
         dataType: 'json',
         success: function(data){
-			let chRE = checkRegExp(document.location.pathname);
+			let chRE = checkRegExp(document.location.pathname, data);
 			if (!chRe){
 				setLocation('/404');
 			}
