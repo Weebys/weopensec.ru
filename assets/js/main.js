@@ -28,7 +28,7 @@ function setLocation(curLoc){
 */
 let openArticle = function(url){
      $.ajax({
-        url: url,
+        url: 'articles/'+url,
         method: 'get',
         dataType: 'html',
         success: function(data){
