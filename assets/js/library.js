@@ -4,7 +4,7 @@ var oldHref = document.location.href;
  * @param {String} url - Current url
 */
 const renderUrl = function(url){
-    return url.split('#')[1];
+    return url.split('/ru/')[1] || url.split('/en/')[1];
 }
 
 const onPageLoadedNone = function(){

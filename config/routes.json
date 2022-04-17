@@ -1,0 +1,22 @@
+[
+	{
+		"preg" : "^\/ru\/$",
+		"title" : "WeOpenSec Блог"
+	},
+	{
+		"preg" : "^\/en\/$",
+		"title" : "WeOpenSec Blog"
+	},
+	{
+		"preg" : "^\/ru\/viewPost\/.*$",
+		"title" : "Название Статьи"
+	},
+	{
+		"preg" : "^\/en\/viewPost\/.*$",
+		"title" : "Post Title"
+	},
+	{
+		"preg" : "^\/404*$",
+		"title" : "Page Not Found"
+	}
+]
