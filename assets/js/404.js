@@ -52,7 +52,7 @@ const matchRegexp = function (){
 */
 let openArticle = function(url){
      $.ajax({
-        url: url,
+        url: langitems["lang_pathname"]+'articles/'+url,
         method: 'get',
         dataType: 'html',
         success: function(data){

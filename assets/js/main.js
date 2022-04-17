@@ -28,7 +28,7 @@ function setLocation(curLoc){
 */
 let openArticle = function(url){
      $.ajax({
-        url: 'articles/'+url,
+        url: langitems["lang_pathname"]+'articles/'+url,
         method: 'get',
         dataType: 'html',
         success: function(data){
