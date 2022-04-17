@@ -76,7 +76,7 @@ let closeArticle = function(){
         barticles.classList.add('closing');
         setTimeout(() => barticles.remove() ,1000);
         checkUrl();
-        document.location.href='#';
+        document.location.href=langitems["lang_pathname"];
     }
 }
 
