@@ -7,6 +7,9 @@ if (document.location.pathname.includes('en')){
     langitems["search"] = 'Nothing found for query: %query%';
 }
 
+/**
+ * @param {String} url - Url to open an article
+*/
 let openArticle = function(url){
      $.ajax({
         url: url,
@@ -75,10 +78,16 @@ let checkUrl = function(){
     });
 }
 
-
+/**
+ * @param {Array} e - Message for frame
+*/
 sendMessage = function(e) {
     document.getElementsByTagName('iframe')[0].contentWindow.postMessage('secret command', 'https://comments.weopensec.ru');
 }
+
+/**
+ * @param {Array} e - Message from frame
+*/
 function receiveMessage(e) {
 					if (e.data.includes(":"))
 						document.getElementsByTagName('iframe')[0].height = e.data.split(':')[1];

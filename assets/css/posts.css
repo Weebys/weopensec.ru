@@ -94,6 +94,16 @@ img.article-image {
     margin-top: 20px;
 }
 
+h3 {
+    font-size: 2em;
+    margin: 0px;
+}
+
+h5 {
+    font-size: 1.5em;
+    margin: 0px;
+}
+
 blockquote > p {
     padding-left: 10px;
     border-left: 2px solid #a9a7a7;
